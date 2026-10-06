@@ -15,8 +15,8 @@ android {
         targetSdk = 35
         ndk { abiFilters += listOf("arm64-v8a", "x86_64") }
         externalNativeBuild { ndkBuild { targets += "hev-socks5-tunnel"; arguments += listOf("NDK_APPLICATION_MK=${rootDir}/vendor/hev-socks5-tunnel/Application.mk", "REV_ID=2.17.1") } }
-        versionCode = 6
-        versionName = "0.4.1-foundation"
+        versionCode = 7
+        versionName = "0.4.2-evidence-scene"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures { compose = true }

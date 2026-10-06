@@ -84,6 +84,7 @@ class MainActivity: ComponentActivity() {
         var confirmDns by remember { mutableStateOf(false) }
         var confirmErase by remember { mutableStateOf(false) }
         var view by remember { mutableStateOf("Your Day") }
+        var showArchive by remember { mutableStateOf(false) }
         LaunchedEffect(view) { screenScroll.scrollToItem(0) }
         var dayOffset by remember { mutableIntStateOf(0) }
         var selectedClaim by remember { mutableStateOf<String?>(null) }
@@ -125,7 +126,9 @@ class MainActivity: ComponentActivity() {
         val apps=events.filter { it.kind=="APP_RESUMED" }.map { it.value }.distinct().size
         val names=events.filter { it.kind=="DNS_REQUEST" }.map { it.value }.distinct()
         val owners=graph.organisations.size
-        Scaffold(containerColor=Cream, bottomBar={
+        if(showArchive) EvidenceSceneScreen(summary,usage,dns,message,error,onClose={showArchive=false},onEvidence={ id ->
+            summary.facts.events.firstOrNull { it.id==id }?.let { detail=it }
+        }) else Scaffold(containerColor=Cream, bottomBar={
             NavigationBar(containerColor=Color(0xFFFEFCF7),tonalElevation=0.dp) {
                 listOf("Your Day","Timeline","Organisations","Take Back").forEachIndexed { index,tab ->
                     NavigationBarItem(selected=view==tab,onClick={view=tab},icon={NavMark(index)},
@@ -142,6 +145,7 @@ class MainActivity: ComponentActivity() {
                 if(error.isNotEmpty()) Text(error,color=MaterialTheme.colorScheme.error)
             }
             if(view=="Your Day") {
+                item { OutlinedButton(onClick={showArchive=true}) { Text("Explore Your Day in 3D  ↗") } }
                 yourDayItems(summary,today,onDate={date -> dayOffset=if(date==today) 0 else -1;selectedClaim=null},onClaim={selectedClaim=it},onPlay={playback=DayStory.build(summary,registry)},onStart={view="Controls"})
             } else if(view=="Take Back") {
                 privacyItems(requests,graph.organisations.map { it.name }.toSet(),onPrepare={ profile ->

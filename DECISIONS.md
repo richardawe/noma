@@ -35,3 +35,6 @@ Replace the narrow DNS route with HevSocks5Tunnel 2.17.1 and an authenticated lo
 
 ## ADR 012 — Durable storage and evidence-led journal UI (accepted)
 Make event batches and pruning transactional, separate capture and erasure epochs, reject stale request edits and persist an erase-pending marker before destructive work. Decrypt snapshots outside the store lock so Stop remains responsive. Use a journal-style Your Day page with prominent playback, persistent navigation and separate Controls. Decorative art never represents invented observations. Test destructive recovery only on the dedicated emulator; use the user's tablet for non-destructive manual acceptance.
+
+## ADR 013 — Offline 3D evidence archive (accepted by user direction)
+The user approved a separate Your Day in 3D screen on 2026-10-06. Keep the native Android app and its collectors intact; bundle a lazy React Three Fiber island in a restricted WebView. Project only the selected retained evidence and collector status across a one-way JSON snapshot boundary. Keep app resumes and DNS groups separate, show every scale rule, and open original evidence in the existing native inspector. Use on-demand rendering, reduced motion and a text fallback. Do not invent traffic, risk scores, historical health or comparisons. Publish on a feature branch and PR; merging remains subject to explicit user approval.
