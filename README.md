@@ -4,6 +4,8 @@ Native Android prototype for seeing a local, evidence-backed data trail.
 
 Current build and handoff: [project memory](MEMORY.md).
 
+**Your Day in 3D** adds a separate, offline evidence archive linked from Your Day. Cabinet fill represents retained record counts; each object links to original evidence. App activity and DNS remain separate. See [scene design, build steps and screenshots](docs/EVIDENCE_SCENE.md).
+
 **Experimental and incomplete M0:** app lifecycle events and standard DNS requests share a timeline. DNS requests are not confirmed connections, and their originating app is **Unknown**. No AI, cloud account, analytics SDK, TLS decryption or location collection.
 
 ## Build

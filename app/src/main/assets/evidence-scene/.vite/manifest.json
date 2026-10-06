@@ -1,0 +1,39 @@
+{
+  "_mount-C9iO9MFa.js": {
+    "file": "assets/mount-C9iO9MFa.js",
+    "name": "mount",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "dynamicImports": [
+      "src/scene/Scene.tsx"
+    ],
+    "css": [
+      "assets/mount-DQOIFJYE.css"
+    ]
+  },
+  "_mount-DQOIFJYE.css": {
+    "file": "assets/mount-DQOIFJYE.css",
+    "src": "_mount-DQOIFJYE.css"
+  },
+  "index.html": {
+    "file": "assets/index-DYf5t-Ac.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_mount-C9iO9MFa.js"
+    ]
+  },
+  "src/scene/Scene.tsx": {
+    "file": "assets/Scene-UofVHvy8.js",
+    "name": "Scene",
+    "src": "src/scene/Scene.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_mount-C9iO9MFa.js",
+      "index.html"
+    ]
+  }
+}

@@ -7,3 +7,7 @@
 .DS_Store
 
 /**/.cxx/
+
+/scene/node_modules/
+/scene/test-results/
+/scene/playwright-report/

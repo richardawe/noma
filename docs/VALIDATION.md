@@ -1,8 +1,12 @@
-# M0–M4 validation — updated 2026-09-23
+# M0–M4 validation — updated 2026-10-06
 
-## Status
+## 3D scene
 
-Current version is `0.4.1-foundation` (code 6), covering M0–M4 and the journal UI redesign. Local IPv4 forwarding and bypassable VPN policy resolve the tested API 35 automatic async DNS failure; tests verify observed evidence for each query. This is **not a completed all-day M0 pilot**. Originating-app attribution remains Unknown, and physical-device battery/long-session acceptance remains outstanding. No language model or automated privacy-request submission is included.
+Version `0.4.2-evidence-scene` (code 7) adds a separate offline WebView screen. Six mapping tests, two production Chromium browser flows, Android build/test APK, 21 JVM tests and lint pass (zero errors, 17 warnings). All 20 Android regression tests pass on the API 35 emulator (273.631 seconds), including native scene integration and the previously failing playback check. The final mobile caption styling was browser-tested and repackaged afterward. Reviewed screenshots use test fixtures, not tablet data. See [scene validation and mapping](EVIDENCE_SCENE.md). Physical tablet rendering/performance remains unverified.
+
+## Foundation status (2026-09-23)
+
+The foundation version was `0.4.1-foundation` (code 6), covering M0–M4 and the journal UI redesign. Local IPv4 forwarding and bypassable VPN policy resolve the tested API 35 automatic async DNS failure; tests verify observed evidence for each query. This is **not a completed all-day M0 pilot**. Originating-app attribution remains Unknown, and physical-device battery/long-session acceptance remains outstanding. No language model or automated privacy-request submission is included.
 
 ## Current foundation checks
 
