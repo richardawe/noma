@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <!-- Separate test-APK UID; absent from the production application. -->
+        <activity android:name="org.noma.ResolverProbeActivity" android:exported="true" />
+    </application>
+</manifest>
